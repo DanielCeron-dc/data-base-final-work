@@ -1,0 +1,11 @@
+.node{
+    position: relative;
+    display: inline-block;
+    height: 3rem;
+    background-color: rgba(161,21,255,1);
+    border-radius: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5rem;
+}

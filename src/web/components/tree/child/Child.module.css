@@ -1,0 +1,42 @@
+.base  {
+    position: relative;
+}
+
+.child {
+    width: 3rem; 
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    border-radius: 50%;
+}
+
+.tooltip {
+    position: absolute;
+    top: -2rem;
+    left: 1rem;
+    z-index: 10;
+    display: none;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    border-radius: 5px;
+    box-shadow: 0 0 5px #000;
+    text-align: center;
+}
+
+
+.base:hover .tooltip {
+    display: block;
+}
+
+.base:hover .child {
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}

@@ -1,6 +1,6 @@
 /* a beatifull class button purple */
 .button {
-    background-color: slateblue;
+    background-color: rgba(161,21,255,1);
     border: none;
     color: white;
     padding: 10px 32px;
@@ -24,7 +24,7 @@
     color: slateblue;
 }
 
-.button.outline:hover {
+.button.outline:hover , .button.selected {
     background-color: rgba(105, 90, 205, 0.459)
 }
 

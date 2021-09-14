@@ -21,6 +21,9 @@ const Panel: React.FC = () => <div style={style}>
     <img src={dataBaseImg} alt="dataBaseImg" style={{width: '100%', borderRadius: '1rem 1rem 0 0', marginBottom: 'auto'}}/>
    
     <h2 style={{ padding: 0, margin: 0 }} >Trabajo Final</h2>
+    <p style={{padding: 0, margin: 0}}>
+        <a href="https://github.com/DanielCeron-dc/data-base-final-work">Codigo </a>
+    </p>
     <Members/>
 </div>
 export default Panel;

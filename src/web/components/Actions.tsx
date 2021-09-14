@@ -18,7 +18,7 @@ const Actions: React.FC = () => <div style={style}>
         <TreeSvg height={30} width={30} />
     </Button>
         
-    <Button variant = "outline" style= {{padding:'5px 10px'}}>
+    <Button variant = "outline" style= {{padding:'5px 10px'}} selected>
         <FileSvg height={30} width={30} />
     </Button>
 

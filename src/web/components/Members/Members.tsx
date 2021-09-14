@@ -11,10 +11,10 @@ const Members: React.FC = () => <div className={styles.members}>
         Daniel Cerón 
     </p>
     <p>
-        Juan Ruiz 
+        Fernanda Martinez
     </p>
     <p>
-        Maria Fernanda 
+        Juan Ruiz 
     </p>
 
 </div>
