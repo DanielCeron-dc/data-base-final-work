@@ -6,9 +6,10 @@ type transparentBoxProps = {
 
 const style: CSSProperties = {
     backgroundColor: 'rgba(255, 255, 255, 0.5)',
-    minWidth: '50rem',
-    width: '70vw',
-    height: '70vh',
+    minWidth: '60rem',
+
+    width: '85vw',
+    height: '90vh',
     position: 'relative',
     borderRadius: '1rem',
     display: 'flex',

@@ -2,7 +2,8 @@
     position: relative;
     display: inline-block;
     height: 3rem;
-    background-color: rgba(161,21,255,1);
+    background-color: #6399df;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.5);
     border-radius: 3rem;
     display: flex;
     align-items: center;

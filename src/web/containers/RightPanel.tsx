@@ -1,7 +1,8 @@
 import React, { CSSProperties } from 'react';
 import Tree from 'web/components/tree/Tree';
-import Actions from '../../components/Actions';
-import Node from '../../components/tree/Node/Node';
+import Actions from '../components/Actions';
+
+
 
 
 const style: CSSProperties = {
@@ -17,9 +18,6 @@ const style: CSSProperties = {
 
 const RightPanel: React.FC = () => {
     
-   /*  const buildTree = (): Node[] => {
-        
-    } */
     return <div style={style}>
         <h1 style = {{margin: '0 10px', position: 'absolute'}}>
             B+ Tree

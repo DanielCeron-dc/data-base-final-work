@@ -1,4 +1,4 @@
-import React, { CSSProperties } from 'react';
+import React  from 'react';
 import styles from './Members.module.css';
 
 
@@ -16,6 +16,5 @@ const Members: React.FC = () => <div className={styles.members}>
     <p>
         Juan Ruiz 
     </p>
-
 </div>
 export default Members;

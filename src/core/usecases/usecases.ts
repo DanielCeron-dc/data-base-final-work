@@ -1,23 +1,16 @@
 import { BPlusTree } from "../infrastructure/tree";
 
-export class usecases {
-    constructor() { }
-    tree: BPlusTree<number, string> = new BPlusTree<number, string>(4 , null);
+export const tree = new BPlusTree<number, string>(3);
 
-    add(key: number, value: string) {
-        this.tree.insert(key, value);
-    }
-
-    get(key: number) {
-        return this.tree.find(key);
-    }
-
-    remove(key: number) {
-        this.tree.remove(key);
-    }
-
-}
-
-
+tree.add(1, "one");
+tree.add(2, "two");
+tree.add(3, "three");
+tree.add(4, "four");
+tree.add(5, "five");
+tree.add(6, "six");
+tree.add(7, "seven");
+tree.add(8, "eight");
+tree.add(9, "nine");
+tree.add(10, "ten");
 
 
