@@ -19,13 +19,13 @@ export class BPlusTree<K, V> {
     public find(key: K): V | null {
         let leaf = this.findLeaf(key, this.root);
         let { index, found } = this.getChildIndex(key, leaf);
-
         if (found) {
             return leaf.children[index].value;
         } else {
             return null;
         }
     }
+    
 
     public add(key: K, value: V) {
         let leaf = this.findLeaf(key, this.root);

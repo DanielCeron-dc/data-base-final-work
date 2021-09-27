@@ -28,11 +28,11 @@ const Buscar:React.FC = () => {
     const [value, setValue] = useState<string | undefined>(undefined); 
 
 
-    return <ReactTooltip place="top" type="dark" id="buscar" clickable effect='solid' delayHide={250} >
+    return <ReactTooltip place="right" type="dark" id="buscar" clickable effect='solid' delayHide={250} >
         <div style={{
             padding: '10px',
             borderRadius: '5px',
-            width: '250px',
+            width: '450px',
         }}>
             <form onSubmit={onSubmit(data => {
 
@@ -42,7 +42,7 @@ const Buscar:React.FC = () => {
                 let newTime = end - start;                 
                 let copyTimes = [...times];
 
-                if (times.length > 2) {
+                if (times.length > 4) {
                     copyTimes.pop();
                 }
                 setTimes([{ number: newTime , color: getRandomColor() }, ...copyTimes]);
@@ -51,7 +51,7 @@ const Buscar:React.FC = () => {
             })}>
                 <Input type="text" ref={register} label={"Key"} name="key" required />
                 <TimeBox times={times} />
-                <h3 style  = {{color: 'mediumseagreen'}}> VALOR:  {value  ? value : 'no se ha buscado'}  </h3>
+                <h3 style  = {{color: 'mediumseagreen'}}> VALOR:  {value  ? value : 'no encontrado'}  </h3>
                 <Button type="submit">Buscar (indexada)</Button>
                 <Button type="submit">Buscar (no indexada)</Button>
             </form>

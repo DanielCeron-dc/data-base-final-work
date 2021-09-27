@@ -9,6 +9,7 @@
 
 .TimeBoxStyle {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -17,9 +18,12 @@
     background-color: "coral";
     border-radius: 1rem;
     margin: 0 0.5rem;
-    flex-wrap: nowrap; 
+    flex-wrap: unset; 
     animation: slidein 1s forwards;
     box-shadow: 0 0  0.5rem 0 white;
+    word-wrap: normal;
+    box-sizing: border-box;
+    flex-shrink: 0;
 }
 
 

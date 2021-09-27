@@ -11,8 +11,8 @@ import { useTreeStore } from 'web/store/useTreeStore';
 
 const style: CSSProperties = {
     display: 'flex',
-    alignSelf: 'flex-end',
-    marginLeft: 'auto',
+    width: '100%',
+    justifyContent: 'flex-end',
 }
 
 
@@ -43,7 +43,7 @@ const Actions: React.FC = () => {
     <Button variant="outline" style={{ padding: '5px 10px' }} data-tip data-for='buscar'>
         <SearchSvg height = {30} width = {30} />
     </Button>
-    <Button variant="outline" style={{ padding: '5px 10px' }} data-tip data-for='eliminar'>
+    <Button variant="outline" style={{ padding: '5px 10px'}} data-tip data-for='eliminar'>
         <DeleteSvg height = {30} width = {30} />
     </Button>
     <Button variant="danger" onClick = {clean}>

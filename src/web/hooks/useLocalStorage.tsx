@@ -1,21 +1,41 @@
-import { useState, useEffect } from "react";
 
-function getStorageValue(key: string, defaultValue: string) {
-    // getting stored value
-    const saved = localStorage.getItem(key);
-    return saved ? JSON.parse(saved) : defaultValue;
+interface IValue {
+    value: string;
+    key: string;
 }
 
-export const useLocalStorage = (key:string, defaultValue:string) => {
-    const [value, setValue] = useState(() => {
-        return getStorageValue(key, defaultValue);
-    });
+class localStorageList {
+    private values: IValue[] = [];
+    key: string;
 
-    useEffect(() => {
-        // storing input name
-        localStorage.setItem(key, JSON.stringify(value));
-        const items = { ...localStorage };
-    }, [key, value]);
+    get getValues() {
+        return this.values;
+    }
 
-    return [value, setValue];
-};
+    constructor(key: string) {
+        this.values = JSON.parse(localStorage.getItem(key) || '[]');
+        this.key = key;
+    }
+
+    public addValue(value: IValue) {
+        this.values.push(value);
+        this.save();
+    }
+
+    public removeValue(value: IValue) {
+        this.values = this.values.filter(item => item.key !== value.key);
+        this.save();
+    }
+
+    public clean() {
+        this.values = [];
+        this.save();
+    }
+
+    private save() {
+        localStorage.setItem(this.key, JSON.stringify(this.values));
+    }
+}
+
+
+export default localStorageList;

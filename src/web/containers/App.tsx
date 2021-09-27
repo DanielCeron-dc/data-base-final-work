@@ -9,6 +9,7 @@ import ToolTips from 'web/components/tooltips/Index';
 
 const App:React.FC = () => {
     
+    
     return <div
         className="App"
     >

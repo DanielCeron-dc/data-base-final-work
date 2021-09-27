@@ -2,9 +2,6 @@ import React, { CSSProperties } from 'react';
 import Tree from 'web/components/tree/Tree';
 import Actions from '../components/Actions';
 
-
-
-
 const style: CSSProperties = {
     display: 'flex',
     flexDirection: 'column',
@@ -15,9 +12,7 @@ const style: CSSProperties = {
     position: 'relative',
 }
 
-
 const RightPanel: React.FC = () => {
-    
     return <div style={style}>
         <h1 style = {{margin: '0 10px', position: 'absolute'}}>
             B+ Tree
@@ -28,4 +23,10 @@ const RightPanel: React.FC = () => {
         <Actions/>
     </div>
 }
+
+
+
 export default RightPanel;
+
+
+

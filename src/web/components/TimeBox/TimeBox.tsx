@@ -21,9 +21,10 @@ const TimeBox: React.FC<TimeBoxProps> = (props) => {
         {props.times.map((object) => {
             const style = { backgroundColor: object.color };
             return <div key={object.color} style={style} className = {styles.TimeBoxStyle}>
-                <h2  style = {{margin: 0 , padding: 0}}>{object.number}</h2> <br/> Seg
+                <p style={{ margin: 0, padding: 0, display: 'inline-block', color: 'black', fontSize: '1rem', fontWeight: 'bolder' }}>{object.number}</p>
+                <h3 style={{ margin: 0, padding: 0, color: 'black', }}>seg</h3>
             </div>
         })}
-    </div> 
+    </div>
 }
 export default TimeBox;

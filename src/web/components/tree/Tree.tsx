@@ -1,7 +1,6 @@
 import React, { CSSProperties, useEffect,} from 'react';
 import Node from "./Node/Node";
 import { useTreeStore } from 'web/store/useTreeStore';
-import { BPlusTree } from 'core/infrastructure/tree';
 
 const style: CSSProperties = {
     display: 'flex',
@@ -21,23 +20,13 @@ const rowStyle: CSSProperties = {
 }
 
 const Tree: React.FC = () => {
-    const { tree, setTree, height } = useTreeStore();
-    const [ rootJSX , setRootJSX ] = React.useState<JSX.Element | null>(null);
+    const { tree, height, setTreeFromMemory, setDefaultTree } = useTreeStore();
+    const [rootJSX, setRootJSX] = React.useState<JSX.Element | null>(null);
 
     useEffect(() => {
-        const defaultTree = new BPlusTree<number, string>(3);
-        defaultTree.add(1, "one");
-        defaultTree.add(2, "two");
-        defaultTree.add(3, "three");
-        defaultTree.add(4, "four");
-        defaultTree.add(5, "five");
-        defaultTree.add(6, "six");
-        defaultTree.add(7, "seven");
-        defaultTree.add(8, "eight");
-        defaultTree.add(9, "nine");
-        defaultTree.add(10, "ten");
-        defaultTree.add(11, "eleven");
-        setTree(defaultTree);
+        if (!setTreeFromMemory()) {
+            setDefaultTree();
+        }
     }, []);
 
     useEffect(() => {
