@@ -20,13 +20,11 @@ const rowStyle: CSSProperties = {
 }
 
 const Tree: React.FC = () => {
-    const { tree, height, setTreeFromMemory, setDefaultTree } = useTreeStore();
+    const { tree, height, setTreeFromMemory} = useTreeStore();
     const [rootJSX, setRootJSX] = React.useState<JSX.Element | null>(null);
 
     useEffect(() => {
-        if (!setTreeFromMemory()) {
-            setDefaultTree();
-        }
+        setTreeFromMemory(); 
     }, []);
 
     useEffect(() => {

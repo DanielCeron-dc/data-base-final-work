@@ -3,7 +3,7 @@ import Integrants from './Integrants';
 import File from './File';
 import Agregar from './Agregar';
 import Buscar from './Buscar';
-import Eliminar from './Eliminar';
+import Aleatorio from './Aleatorio';
 
 const Index:React.FC = () => {
     
@@ -12,7 +12,7 @@ const Index:React.FC = () => {
         <File />
         <Agregar />
         <Buscar />
-        <Eliminar />
+        <Aleatorio />
     </>
 }
-export default Index;
+export default Index; 
